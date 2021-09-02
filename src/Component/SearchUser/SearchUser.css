@@ -1,0 +1,26 @@
+.search-user {
+  width: 100%;
+  height: fit-content;
+}
+
+.search-user input {
+  width: 100%;
+  padding: 8px 8px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-user button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 0px;
+  font-size: 20px;
+  background-color: var(--dark-color);
+  border: none;
+  color: var(--white-color);
+}
+
+.search-user button:active {
+  opacity: 0.75;
+}

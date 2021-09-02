@@ -1,0 +1,8 @@
+.userList {
+  width: 100%;
+  height: fit-content;
+  padding: 16px 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}

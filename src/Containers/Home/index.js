@@ -1,48 +1,49 @@
 import React, { Component } from 'react';
-import SearchUser from '../../Component/SearchUser';
-import axios from "axios";
+import Loading from '../../Component/Loading';
 import UserList from '../../Component/UserList';
 import UserAPI from '../../Services/Users/Users';
 
 class Home extends Component {
-    constructor(props){
+    constructor (props){
         super(props);
+
         this.state = {
-            users :[],
+            users : [],
+            isLoaidng : false,
         }
     }
-    // cach 1:
-    // fetchUser =(search)=>{
-    //     axios.get(`https://api.github.com/search/users?q=${search}`)
-    //     .then((response)=>{
-    //         this.setState({
-    //             users : response.data.items
-    //         })
-    //     })
-    //     .catch((error)=>{
-    //         console.log(error);
-    //     })
-    // }
-
-
-    // cach 2:
-    onFetchSearchUser = async (search)=>{
+    componentDidMount(){
+        this.onFetchUser(); //load User form BE
+    }
+    
+    onFetchUser = async ()=>{
+        this.setState({
+            isLoading : true,
+            users : [],
+        })
         try{
-            const response = await UserAPI.fetchSearchUser(search); //return promise
+            const reponse = await UserAPI.fetchUser();
+
             this.setState({
-                users : response.data.items
+                users : reponse.data,
+                isLoading : false,
             })
         }
         catch(err){
             console.log(err);
-        };
+        }
     }
+
     render() {
         return (
-            <div className = "home-page">
-                <SearchUser onFetchSearchUser = {this.onFetchSearchUser}></SearchUser>
-                <UserList users = {this.state.users}></UserList>
-            </div>
+            <>
+                <Loading isLoading = {this.state.isLoading}></Loading>
+                <div>
+                    {
+                        <UserList users = {this.state.users}></UserList>
+                    }
+                </div>
+            </>
         );
     }
 }

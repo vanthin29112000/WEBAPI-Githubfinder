@@ -1,0 +1,64 @@
+.user-info {
+  width: 100%;
+  margin-top: 8px;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #cccccc;
+}
+
+.user-info__left {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.user-info__left img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user-info__left h2 {
+  margin-bottom: 4px;
+}
+
+.user-info__right {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.user-info__right strong {
+  margin-bottom: 8px;
+}
+
+.user-info__right .blog {
+  font-size: 400;
+  color: blue;
+  text-decoration: none;
+}
+
+.user-info__right .blog:hover {
+  text-decoration: underline;
+}
+
+.btnVisitGit {
+  width: fit-content;
+  padding: 8px 16px;
+  margin-top: 16px;
+  background-color: var(--dark-color);
+}
+
+.btnVisitGit:hover {
+  opacity: 0.75;
+}
+
+.btnVisitGit a {
+  color: var(--white-color);
+  text-decoration: none;
+}

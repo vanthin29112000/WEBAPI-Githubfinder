@@ -1,0 +1,16 @@
+.about {
+  width: 100%;
+  height: fit-content;
+  padding: 16px 25%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+}
+
+.about i {
+  margin-top: 64px;
+  font-size: 108px;
+  color: var(--success-color);
+}

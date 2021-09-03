@@ -1,0 +1,20 @@
+.home-page {
+  width: 100%;
+  height: fit-content;
+}
+
+.notify-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 8px;
+  background-color: rgba(252, 218, 216, 0.75);
+  color: #c7848a;
+}
+
+.notify-search p {
+  margin: 0px 8px;
+}

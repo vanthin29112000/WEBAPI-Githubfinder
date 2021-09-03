@@ -1,0 +1,41 @@
+.userDetail__rollback {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.userDetail__rollback button {
+  padding: 8px 16px;
+  margin-right: 16px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+
+.userDetail__rollback button:hover {
+  border: 1px solid #a3a0a0;
+}
+
+.userDetail__rollback button:active {
+  opacity: 0.75;
+}
+
+.userDetail__rollback img {
+  width: 24px;
+  height: 24px;
+}
+
+.userDetail__rollback p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.userDetail__rollback p .danger {
+  color: red;
+}
+
+.userDetail__rollback p .check {
+  color: rgb(13, 179, 13);
+}

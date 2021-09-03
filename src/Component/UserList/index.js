@@ -1,17 +1,22 @@
 import React from 'react';
 import "./UserList.css"
 import UserItem from '../UserItem';
+import Loading from '../Loading';
 
 const UserList = (props) => {
-    let {users} = props;
+    let { users, isLoading } = props;
     return (
-        <div className = "userList">
-            {
-                users.map((ele,index) =>
-                    <UserItem user={ele} key = {index}></UserItem>
-                )
-            }
-        </div>
+        <>
+            <Loading isLoading={isLoading}></Loading>
+            <div className="userList">
+                {
+                    users.map((ele, index) =>
+                        <UserItem user={ele} key={index}></UserItem>
+                    )
+                }
+
+            </div>
+        </>
     )
 }
 

@@ -46,10 +46,23 @@
   --main-bg: #1877f2;
   --white-color: #ffffff;
   --dark-color: #333333;
+  --primary : #1877f2;
+  --light-color: #f4f4f4;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --secondary-color: grey;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
-  padding-top: 32px;
+  padding-top: 16px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration:underline;
 }
